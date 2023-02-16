@@ -1,0 +1,183 @@
+/* Nav */
+@import url(base.css);
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: #000000;
+}
+
+.content {
+    margin: -20px 15% 0 15%;
+    background-color: #FFFFFF;
+    height: 100vh;
+}
+
+header {
+    position: relative;
+    width: 318px;
+    height: 24px;
+    left: 65%;
+    top: 40px;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+
+}
+
+.nav li {
+    list-style: none;
+
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.nav li a {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* Presentation section */
+
+main {
+    position: relative;
+    top: 80px;
+    width: 100%;
+}
+
+.presentation {
+    color: var(--secondary-color-bold);
+}
+
+.presentation .name {
+    position: relative;
+    left: 385px;
+    letter-spacing: -0.03em;
+}
+
+.presentation .description {
+    position: relative;
+    width: 600px;
+    left: 385px;
+    letter-spacing: -0.02em;
+}
+
+.presentation .description .status {
+    color: var(--primary-color-bold);
+}
+
+.presentation .other {
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 0px;
+
+    position: relative;
+    width: 500px;
+    height: 50px;
+    left: 385px;
+    top: 10px;
+}
+
+.presentation .social {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 24px;
+    height: inherit;
+}
+
+.presentation .social svg {
+    width: 24px;
+    height: 24px;
+}
+
+.presentation .social a {
+    display: block;
+    margin: 0;
+}
+
+.presentation .social .github {
+    fill: #3E75C3;
+}
+
+.presentation .social .linkedin {
+    fill: #007EBB;
+}
+
+.presentation .social .chess {
+    fill: #10d19a;
+}
+
+.presentation .resume {
+    display: flex;
+    width: 160px;
+    height: inherit;
+    border-bottom: 5px var(--primary-color) solid;
+    background: linear-gradient(#ffffff, #ffffff 50%, var(--primary-color) 50%, var(--primary-color));
+    background-size: 100% 300%;
+    transition: background 1s;
+}
+
+.presentation .resume span {
+    margin: auto;
+}
+
+.presentation .resume:hover {
+    cursor: pointer;
+    background-position: 10% 100%;
+}
+
+.presentation .resume svg {
+    width: 24px;
+    height: inherit;
+    margin-right: 10px;
+}
+
+.presentation .resume button {
+    border: none;
+    background: none;
+    margin-left: 10px;
+}
+
+.presentation .resume button:hover {
+    cursor: pointer;
+}
+
+.chess-king{
+    height: 40px;
+}
+.chess-king img{
+    position: relative;
+    width: 267.69px;
+    left: 50px;
+    top: -250px;
+    height: 300px;
+    border-radius: 140.39px;
+    transform: matrix(-0.5, -0.49, -0.49, 0.87, 0, 0);
+}
+
+/* Projects list */
+
+.projects > .heading1{
+
+}

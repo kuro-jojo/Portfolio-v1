@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+
+:root {
+    --primary-color: #DD9C3C;
+    --primary-color-bold: #BF7506;
+    --primary-color-light: #F4DEBE;
+
+    --secondary-color: #83807C;
+    --secondary-color-bold: #211B12;
+    --secondary-color-light: #E7E6E4;
+    --font-family: 'Inter', 'JetBrains Mono', monospace;
+}
+
+.heading1 {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+}
+
+.heading2 {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+}
+
+.heading3 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 135%;
+    letter-spacing: -0.02em;
+}
+
+.text-normal {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.text-small {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+}
