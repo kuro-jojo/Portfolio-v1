@@ -35,9 +35,9 @@
 
 .text-normal {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 24px;
 }
 
 .text-small {

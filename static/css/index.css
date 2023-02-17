@@ -6,14 +6,14 @@
     font-family: var(--font-family);
 }
 
-body {
-    background-color: #000000;
-}
 
 .content {
     margin: -20px 15% 0 15%;
-    background-color: #FFFFFF;
-    height: 100vh;
+    border: 2px solid var(--primary-color);
+    border-bottom: 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 500px;
 }
 
 header {
@@ -130,12 +130,13 @@ main {
 
 .presentation .resume {
     display: flex;
-    width: 160px;
+    width: 180px;
     height: inherit;
     border-bottom: 5px var(--primary-color) solid;
     background: linear-gradient(#ffffff, #ffffff 50%, var(--primary-color) 50%, var(--primary-color));
     background-size: 100% 300%;
     transition: background 1s;
+    padding-left: 10px;
 }
 
 .presentation .resume span {
@@ -163,10 +164,11 @@ main {
     cursor: pointer;
 }
 
-.chess-king{
+.chess-king {
     height: 40px;
 }
-.chess-king img{
+
+.chess-king img {
     position: relative;
     width: 267.69px;
     left: 50px;
@@ -177,7 +179,80 @@ main {
 }
 
 /* Projects list */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 12%;
+}
 
-.projects > .heading1{
+.projects>.heading1 {
+    color: var(--primary-color-bold);
+    position: absolute;
+    width: auto;
+    height: 60px;
+    left: 205px;
+    top: auto;
+    letter-spacing: -0.03em;
+}
 
+.projects .card {
+    position: relative;
+    width: 399px;
+    height: 527px;
+    top: 130px;
+}
+
+.projects .card img {
+    position: relative;
+    width: 399px;
+    height: 299px;
+    left: 0px;
+    top: 0px;
+    box-shadow: 0 4px 8px 0 var(--secondary-color);
+    transition: 0.5s;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.projects .card img:hover {
+    box-shadow: 0 16px 32px 0 var(--secondary-color);
+    cursor: pointer;
+}
+
+.projects .card .container .heading3 {
+    position: relative;
+    width: 273px;
+    height: 32px;
+    left: 40px;
+    color: var(--primary-color-bold);
+}
+
+.languages {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    gap: 4px;
+    flex-wrap: wrap;
+
+    position: relative;
+    width: auto;
+    left: 16px;
+    top: 10px;
+
+}
+
+.languages span {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px 8px 4px;
+    height: 27px;
+
+    /* Brand/500 */
+    border: 1px solid #DD9C3C;
+    border-radius: 4px;
 }
