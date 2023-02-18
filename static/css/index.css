@@ -71,7 +71,7 @@ main {
 
 .presentation .description {
     position: relative;
-    width: 600px;
+    width: 620px;
     left: 385px;
     letter-spacing: -0.02em;
 }
@@ -81,14 +81,10 @@ main {
 }
 
 .presentation .other {
-
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-
-    padding: 0px;
-
     position: relative;
     width: 500px;
     height: 50px;
@@ -169,7 +165,7 @@ main {
     transition: transform 1s;
 }
 
-.chess-king img:hover{
+.chess-king img:hover {
     transform: rotate(-30deg);
     cursor: pointer;
 
@@ -177,11 +173,11 @@ main {
 
 /* Projects list */
 .projects {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin: 12%;
-	margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 12%;
+    margin-top: 3%;
 }
 
 .projects>.heading1 {
@@ -255,14 +251,16 @@ main {
     border: 1px solid #DD9C3C;
     border-radius: 4px;
 }
-.card a{
+
+.card a {
     text-decoration: none;
 }
+
 .card .code {
     display: flex;
     padding: 7px 8px 5px;
     width: 86px;
-   
+
 }
 
 .card .code .icon {
@@ -289,9 +287,9 @@ main {
 /* Footer */
 
 .footer {
-	position: absolute;
-	width: 100%;
-	color: var(--secondary-color);
-	text-align: center;
-	margin-top: 80px;
+    position: absolute;
+    width: 100%;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-top: 80px;
 }
