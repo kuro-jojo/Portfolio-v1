@@ -7,8 +7,8 @@ app = Flask('__name__')
 @app.route('/')
 def home():
     repos = g.get_repos()
-    for repo in repos:
-        print(repo.clone_url)
+    # for repo in repos:
+    #     print(repo.get_tags())
     return render_template('index.html', repos=repos)
 
 

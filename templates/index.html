@@ -5,6 +5,9 @@
     {% block head %}
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/king.jpg')}}" type="image/x-icon">
     <link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
@@ -13,7 +16,7 @@
 </head>
 
 <body>
-    <div class="content">
+    <div>
         <header>
             <nav class="nav">
                 <ul>
@@ -24,7 +27,7 @@
                 </ul>
             </nav>
         </header>
-        <main>
+        <main class="content">
             {% set github_url = 'https://github.com/kuro-jojo' %}
             {% set linkedin_url = 'https://www.linkedin.com/in/jonathan-koumou/' %}
             {% set chess_url = 'https://www.chess.com/member/kuro_o8' %}
@@ -35,7 +38,8 @@
                 <div class="description heading3">
                     <p>
                         <span class="status">Engineer Student in Software Development.</span><br>
-                        I'm passionated by Tech and currently AI.
+                        I do web development, especially back-end.
+                        I am passionate about technology and currently about AI.
                     </p>
                 </div>
                 <div class="other">
@@ -71,20 +75,47 @@
                         </span>
                     </div>
 
-                    <div class="resume">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+                    <div class="resume button-style">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" data-toggle="modal"
+                            data-target="#resume-view">
                             <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <path
                                 d="M360.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z" />
                         </svg>
-                        <span>View CV</span>
-                        <button type="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 512">
-                                <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                <path
-                                    d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
-                            </svg>
+                        <span data-toggle="modal" data-target="#resume-view">View CV</span>
+
+                        <button type="button" title="Download the resume">
+                            <a href="{{ url_for('static', filename='pdf/cv_dev.pdf')}}" download="jonathan_resume.pdf">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 512">
+                                    <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
+                                </svg>
+                            </a>
                         </button>
+                        <div id="resume-view" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <span class="modal-title heading2">My resume</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <embed src="{{ url_for('static', filename='pdf/cv_dev.pdf')}}" frameborder="0"
+                                            width="100%" height="600px">
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="chess-king">
@@ -95,14 +126,13 @@
             <section class="projects">
                 <h1 class="heading1">Latest Projects</h1>
                 {% for repo in repos %}
-                {% set lang = repo.get_languages() %}
+                {% set lang = repo.get_topics() %}
 
                 <div class="card">
-                    <a href="{{ repo.html_url }}" target="_blank" rel="noreferrer noopener">
-                        <img src="{{ url_for('static', filename='images/project.png')}}" alt="{{ repo.name}}"
-                            style="width:100%">
-                    </a>
-                    <div class="container">
+                    <img src="{{ url_for('static', filename='images/project.png')}}" alt="{{ repo.name}}"
+                        style="width:100%">
+                    <div>
+
                         <span class="heading3">
                             <b>{{ repo.name }}</b>
                         </span>
@@ -113,11 +143,28 @@
                         </div>
                         <p class="text-normal">{{ repo.description }}</p>
                     </div>
+
+                    <a href="{{ repo.html_url }}" target="_blank" rel="noreferrer noopener">
+                        <div class="code button-style">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 640 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
+                                </svg>
+                            </div>
+                            <span class="">Code</span>
+                        </div>
+                    </a>
                 </div>
                 {% endfor %}
             </section>
         </main>
     </div>
+
+    <footer class="footer">
+        Made with ❤️ by Jonathan Assamagan.
+    </footer>
     {% block script %}{% endblock %}
 </body>
 
