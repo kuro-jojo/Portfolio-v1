@@ -14,21 +14,21 @@
 
 .heading1 {
     font-weight: bold;
-    font-size: 46px;
+    font-size: 3rem;
     line-height: 125%;
     letter-spacing: -0.03em;
 }
 
 .heading2 {
     font-weight: bold;
-    font-size: 32px;
+    font-size: clamp(2rem, 4rem + 10vw, 3rem);
     line-height: 125%;
     letter-spacing: -0.03em;
 }
 
 .heading3 {
     font-weight: bold;
-    font-size: 24px;
+    font-size: clamp(1rem, 4rem + 10vw, 2rem);
     line-height: 135%;
     letter-spacing: -0.02em;
 }
@@ -44,17 +44,18 @@
 .text-small {
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
+    font-size: clamp(0.5rem, 4rem + 10vw, 1rem);
     line-height: 150%;
 }
 
-.button-style{
+.button-style {
     border-bottom: 5px var(--primary-color) solid;
     background: linear-gradient(#ffffff, #ffffff 50%, var(--primary-color) 50%, var(--primary-color));
     background-size: 100% 300%;
     transition: background 1s;
 }
-.button-style:hover{
+
+.button-style:hover {
     cursor: pointer;
     background-position: 10% 100%;
 }

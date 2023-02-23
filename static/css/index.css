@@ -13,25 +13,23 @@ body {
 
 header {
     position: relative;
-    width: 318px;
-    height: 24px;
-    left: 65%;
-    top: 40px;
+    width: max-content;
+    max-height: 100%;
+    float: right;
+    margin-right: 10%;
+    top: 4rem;
 }
 
 .nav ul {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
+    margin: 0;
+    gap: 2em;
 }
 
 .nav li {
     list-style: none;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
 
 .nav li a {
@@ -46,7 +44,7 @@ header {
 
 main {
     position: relative;
-    top: 80px;
+    top: 15rem;
     width: 70%;
     margin: auto;
 }
@@ -62,17 +60,19 @@ main {
     border-bottom-right-radius: 25px;
     height: auto;
 }
-
-.presentation .name {
+.presentation .author{
     position: relative;
-    left: 385px;
+    right: -38rem;
+    max-width: 51%;
+
+}
+.presentation .name {
+    
     letter-spacing: -0.03em;
+    margin: 1.2em 0;
 }
 
 .presentation .description {
-    position: relative;
-    width: 620px;
-    left: 385px;
     letter-spacing: -0.02em;
 }
 
@@ -80,6 +80,9 @@ main {
     color: var(--primary-color-bold);
 }
 
+.presentation .description p{
+    max-width: 100%;
+}
 .presentation .other {
     display: flex;
     flex-direction: row;

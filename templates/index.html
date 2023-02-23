@@ -31,16 +31,19 @@
             {% set github_url = 'https://github.com/kuro-jojo' %}
             {% set linkedin_url = 'https://www.linkedin.com/in/jonathan-koumou/' %}
             {% set chess_url = 'https://www.chess.com/member/kuro_o8' %}
+            {% set cv_name = 'cv_dev_jonathan.pdf' %}
 
             <section class="presentation ">
-                <span class="name heading1">Hi👋, I'm Jonathan ASSAMAGAN</span>
+                <div class="author">
+                    <div class="name heading1">Hi👋, I'm Jonathan ASSAMAGAN</div>
 
-                <div class="description heading3">
-                    <p>
-                        <span class="status">Engineer Student in Software Development.</span><br>
-                        I do web development, especially back-end.
-                        I am passionate about technology and currently about AI.
-                    </p>
+                    <div class="description heading3">
+                        <p>
+                            <span class="status">Engineer Student in Software Development.</span><br>
+                            I do web development, especially back-end.
+                            I am passionate about technology and currently about AI.
+                        </p>
+                    </div>
                 </div>
                 <div class="other">
                     <div class="social">
@@ -85,7 +88,7 @@
                         <span data-toggle="modal" data-target="#resume-view">View CV</span>
 
                         <button type="button" title="Download the resume">
-                            <a href="{{ url_for('static', filename='pdf/cv_dev.pdf')}}" download="jonathan_resume.pdf">
+                            <a href="{{ url_for('static', filename='pdf/' ~ cv_name)}}" download="jonathan_resume.pdf">
 
                                 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 512">
                                     <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -104,7 +107,7 @@
                                         <span class="modal-title heading2">My resume</span>
                                     </div>
                                     <div class="modal-body">
-                                        <embed src="{{ url_for('static', filename='pdf/cv_dev.pdf')}}" frameborder="0"
+                                        <embed src="{{ url_for('static', filename='pdf/' ~ cv_name)}}" frameborder="0"
                                             width="100%" height="600px">
 
                                         <div class="modal-footer">
