@@ -1,7 +1,8 @@
-# My personal website
+# My personal website (In progress)
 
 This website is a personal project that, first of all is a portfolio and also contains multiple features.
 
+It is hosted on Microsoft Azure and is accessible [here](https://kuro-portfolio.azurewebsites.net/).
 ## Functionalities
 
 ### List of personal projects (hosted on GIthub)
