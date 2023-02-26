@@ -11,6 +11,7 @@ body {
     margin: auto;
 }
 
+/* Navbar */
 header {
     position: relative;
     width: max-content;
@@ -36,15 +37,19 @@ header {
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
     line-height: 150%;
     text-decoration: none;
     color: var(--primary-color);
 }
 
+@media (max-width:400px) {
+
+}
+
+/* Main body */
 main {
     position: relative;
-    top: 15rem;
+    top: 8vh;
     width: 70%;
     margin: auto;
 }
@@ -52,22 +57,45 @@ main {
 /* Presentation section */
 
 .presentation {
-    color: var(--secondary-color-bold);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     border: 2px solid var(--primary-color);
     border-bottom: 0;
     border-top: 0;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+}
+
+.presentation .head {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.chess-king {
     height: auto;
 }
-.presentation .author{
-    position: relative;
-    right: -38rem;
-    max-width: 51%;
+
+.chess-king img {
+    height: 23em;
+    transform: rotate(30deg) skew(2deg);
+    transition: transform 1s;
+}
+
+.chess-king img:hover {
+    transform: rotate(-30deg);
+    cursor: pointer;
 
 }
+
+.presentation .author {
+    max-width: 80%;
+
+}
+
 .presentation .name {
-    
+
     letter-spacing: -0.03em;
     margin: 1.2em 0;
 }
@@ -80,32 +108,29 @@ main {
     color: var(--primary-color-bold);
 }
 
-.presentation .description p{
+.presentation .description p {
     max-width: 100%;
 }
+
+/* Social media and resume */
 .presentation .other {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    position: relative;
-    width: 500px;
-    height: 50px;
-    left: 385px;
-    top: 10px;
+    justify-content: space-around;
+    width: 80%;
+    height: 4em;
+    margin: auto;
 }
 
 .presentation .social {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    gap: 24px;
-    height: inherit;
+    gap: clamp(1rem, -3rem + 8vw, 3rem);
 }
 
 .presentation .social svg {
-    width: 24px;
-    height: 24px;
+    width: 4.5rem;
+    height: 4.5rem;
 }
 
 .presentation .social a {
@@ -127,9 +152,9 @@ main {
 
 .presentation .resume {
     display: flex;
-    width: 180px;
+    width: 18rem;
     height: inherit;
-    padding-left: 10px;
+    padding: 0 0.5rem;
 }
 
 .presentation .resume span {
@@ -138,40 +163,54 @@ main {
 
 
 .presentation .resume svg {
-    width: 24px;
+    width: 1.7em;
     height: inherit;
-    margin-right: 10px;
 }
 
 .presentation .resume button {
     border: none;
     background: none;
-    margin-left: 10px;
 }
 
 .presentation .resume button:hover {
     cursor: pointer;
 }
 
-.chess-king {
-    height: 40px;
+
+@media (max-width:930px) {
+    .presentation .author {
+        margin: auto;
+    }
+
+    .chess-king {
+        display: none;
+    }
 }
 
-.chess-king img {
-    position: relative;
-    width: 267.69px;
-    left: 50px;
-    top: -250px;
-    height: 300px;
-    border-radius: 140.39px;
-    transform: rotate(30deg) skew(2deg);
-    transition: transform 1s;
+@media (max-width:600px) {
+    .presentation .resume {
+        width: clamp(14rem, -0.875rem + 3vw, 16rem);
+    }
+
+    .presentation .resume>svg,
+    .resume button {
+        display: none;
+    }
 }
 
-.chess-king img:hover {
-    transform: rotate(-30deg);
-    cursor: pointer;
+@media (max-width:490px) {
+    .presentation .social {
+        display: none;
+    }
 
+    .presentation .resume>svg,
+    .resume button {
+        display: block;
+    }
+
+    .presentation .resume {
+        width: 17rem;
+    }
 }
 
 /* Projects list */

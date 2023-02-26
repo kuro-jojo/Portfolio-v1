@@ -14,7 +14,7 @@
 
 .heading1 {
     font-weight: bold;
-    font-size: 3rem;
+    font-size:clamp(2.5rem, -0.875rem + 3vw, 8rem);
     line-height: 125%;
     letter-spacing: -0.03em;
 }
@@ -28,7 +28,7 @@
 
 .heading3 {
     font-weight: bold;
-    font-size: clamp(1rem, 4rem + 10vw, 2rem);
+    font-size: clamp(1rem, -0.875rem + 3vw, 2rem);
     line-height: 135%;
     letter-spacing: -0.02em;
 }
@@ -36,8 +36,8 @@
 .text-normal {
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: clamp(1rem, 0.5rem + 2vw, 2rem);
+    line-height: 2em;
     text-align: justify;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .button-style {
-    border-bottom: 5px var(--primary-color) solid;
+    border-bottom: 0.5rem var(--primary-color) solid;
     background: linear-gradient(#ffffff, #ffffff 50%, var(--primary-color) 50%, var(--primary-color));
     background-size: 100% 300%;
     transition: background 1s;
