@@ -2,7 +2,7 @@
 
 This website is a personal project that, first of all is a portfolio and also contains multiple features.
 
-It is hosted on Microsoft Azure and is accessible [here](https://kuro-portfolio.azurewebsites.net/).
+It is hosted on Microsoft Azure and is accessible [here](portfolio-kuro.koyeb.app/).
 ## Functionalities
 
 ### List of personal projects (hosted on GIthub)
