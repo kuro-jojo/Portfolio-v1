@@ -91,7 +91,9 @@
 .chess {
     fill: #10d19a;
 }
-
+.presentation .resume.mobile {
+    display: none;
+}
 .presentation .resume {
     display: flex;
     width: 18rem;
@@ -131,13 +133,17 @@
 
 @media (max-width:600px) {
     .presentation .resume {
-        width: clamp(14rem, -0.875rem + 3vw, 16rem);
-    }
-
-    .presentation .resume>svg,
-    .resume button {
+        /* width: clamp(14rem, -0.875rem + 3vw, 16rem); */
         display: none;
     }
+
+    .presentation .resume.mobile{
+        display: flex;
+    }
+    /* .presentation .resume>svg,
+    .resume button {
+        display: none;
+    } */
 }
 
 @media (max-width:490px) {
