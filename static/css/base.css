@@ -12,9 +12,16 @@
     --font-family: 'Inter', 'JetBrains Mono', monospace;
 }
 
+.heading {
+    font-weight: bold;
+    font-size: clamp(2.8rem, -5.125rem + 10vw, 7rem);
+    line-height: 125%;
+    letter-spacing: -0.03em;
+}
+
 .heading1 {
     font-weight: bold;
-    font-size:clamp(2.5rem, -0.875rem + 3vw, 8rem);
+    font-size: clamp(2.5rem, -0.875rem + 3vw, 8rem);
     line-height: 125%;
     letter-spacing: -0.03em;
 }
@@ -38,7 +45,7 @@
     font-weight: 400;
     font-size: clamp(1rem, 0.5rem + 2vw, 2rem);
     line-height: 2em;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 .text-small {
@@ -51,7 +58,7 @@
 .button-style {
     border-bottom: 0.5rem var(--primary-color) solid;
     background: linear-gradient(#ffffff, #ffffff 50%, var(--primary-color) 50%, var(--primary-color));
-    background-size: 100% 300%;
+    background-size: 100% 330%;
     transition: background 1s;
 }
 

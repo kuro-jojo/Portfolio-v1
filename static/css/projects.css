@@ -1,0 +1,128 @@
+/* Projects list */
+.projects {
+    position: relative;
+    top: 5rem;
+    margin: 0 2%;
+}
+@media (min-width:1200px) {
+    .projects{
+        width: 75%;
+        margin: auto;
+    }
+}
+.projects>.heading {
+    color: var(--secondary-color-bold);
+    text-align: center;
+    position: relative;
+    display: block;
+    width: 70%;
+    left: 20%;
+}
+
+.projects>.heading::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.4rem;
+    bottom: 0;
+    left: 0;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+}
+
+.projects>.heading:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.projects .cards {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    gap: 5rem;
+    top: 3rem;
+}
+.projects .card {
+    width: 40rem;
+}
+
+.projects .card .repo-name {
+    display: block;
+    font-weight: bold;
+    font-size: clamp(2.8rem, -0.875rem + 3vw, 2rem);
+    line-height: 135%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin: 1.6rem 0;
+
+}
+
+.projects .card img {
+    position: relative;
+    width: 100%;
+    height: 28rem;
+    box-shadow: 0 0.4rem 0.8rem 0 var(--secondary-color);
+    transition: 0.5s;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.projects .card img:hover {
+    box-shadow: 0 1.6rem 3.2rem 0 var(--secondary-color);
+    cursor: pointer;
+}
+
+
+.languages {
+    position: relative;
+    width: auto;
+    left: 1.6rem;
+    top: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3rem;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+
+
+}
+
+.languages span {
+    box-sizing: border-box;
+    padding: 0.5rem 0.8rem 0.4rem;
+    border: 0.2rem solid var(--primary-color);
+    border-radius: 0.4rem;
+    color: var(--secondary-color);
+}
+
+.projects .card .button-style {
+    max-width: 10rem;
+}
+
+.projects .card .code {
+    margin: auto;
+}
+
+.projects .card a {
+    display: flex;
+    padding: 0.7rem 2rem 0.5rem;
+    max-width: 100%;
+    text-decoration: none;
+    height: 3rem;
+}
+
+.projects .card a .icon {
+    width: 2.4rem;
+    margin-right: 0.5rem;
+}
+
+.projects .card a span {
+    font-weight: 700;
+    color: var(--secondary-color-bold);
+}

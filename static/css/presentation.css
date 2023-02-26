@@ -1,0 +1,164 @@
+/* Presentation section */
+
+.presentation {
+    margin: 5rem auto;
+    width: 70%;
+    border: 2px solid var(--primary-color);
+    border-bottom: 0;
+    border-top: 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.presentation .head {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.chess-king {
+    height: auto;
+}
+
+.chess-king img {
+    height: 23em;
+    transform: rotate(30deg) skew(2deg);
+    transition: transform 1s;
+}
+
+.chess-king img:hover {
+    transform: rotate(-30deg);
+    cursor: pointer;
+
+}
+
+.presentation .author {
+    max-width: 80%;
+
+}
+
+.presentation .name {
+    letter-spacing: -0.03em;
+    margin: 1.2em 0;
+}
+
+.presentation .description {
+    letter-spacing: -0.02em;
+}
+
+.presentation .description .status {
+    color: var(--primary-color-bold);
+}
+
+.presentation .description p {
+    max-width: 100%;
+}
+
+/* Social media and resume */
+.presentation .other {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: 4em;
+    margin: auto;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: clamp(1rem, -3rem + 8vw, 3rem);
+}
+
+.social svg {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.social a {
+    display: block;
+    margin: 0;
+}
+
+.github {
+    fill: #3E75C3;
+}
+
+.linkedin {
+    fill: #007EBB;
+}
+
+.chess {
+    fill: #10d19a;
+}
+
+.presentation .resume {
+    display: flex;
+    width: 18rem;
+    height: inherit;
+    padding: 0 0.5rem;
+}
+
+.presentation .resume span {
+    margin: auto;
+}
+
+
+.presentation .resume svg {
+    width: 1.7em;
+    height: inherit;
+}
+
+.presentation .resume button {
+    border: none;
+    background: none;
+}
+
+.presentation .resume button:hover {
+    cursor: pointer;
+}
+
+
+@media (max-width:930px) {
+    .presentation .author {
+        margin: auto;
+    }
+
+    .chess-king {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+    .presentation .resume {
+        width: clamp(14rem, -0.875rem + 3vw, 16rem);
+    }
+
+    .presentation .resume>svg,
+    .resume button {
+        display: none;
+    }
+}
+
+@media (max-width:490px) {
+    .presentation .social {
+        display: none;
+    }
+
+    .presentation .resume>svg,
+    .resume button {
+        display: block;
+    }
+
+    .presentation .resume {
+        width: 17rem;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer .social {
+        margin: 2rem auto;
+    }
+}
