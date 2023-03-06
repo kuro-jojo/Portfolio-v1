@@ -21,7 +21,9 @@ name: Build and deploy Python app to Azure Web App
 
 env:
   PYTHON_VERSION: '3.8'              # set this to the Python version to use
-
+  MYSQL_USER: ${{ secrets.MYSQL_USER }}
+  MYSQL_DATABASE: portfolio_db
+  MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
 on:
   push:
     branches: [ "main" ]
