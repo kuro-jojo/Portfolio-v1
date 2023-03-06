@@ -8,6 +8,10 @@ from src.models import UserMessage
 from src.modules.form import fetch_contact_data
 
 app = Flask(__name__)
+print(os.getenv('MYSQL_USER'))
+print(os.getenv('MYSQL_PASSWORD'))
+print(os.getenv('MYSQL_HOST'))
+print(os.getenv('MYSQL_DATABASE'))
 
 app.config[
     "SQLALCHEMY_DATABASE_URI"
@@ -15,6 +19,10 @@ app.config[
 db = UserMessage.db
 db.init_app(app)
 
+print(os.getenv('MYSQL_USER'))
+print(os.getenv('MYSQL_PASSWORD'))
+print(os.getenv('MYSQL_HOST'))
+print(os.getenv('MYSQL_DATABASE'))
 
 @app.route("/")
 def home():
