@@ -22,7 +22,7 @@ services:
       - my-db:/var/lib/mysql
 
   web:
-    image: kuro08/portfolio
+    image: kuro08/portfolio:latest
     restart: always
     ports:
       - "5000:5000"
