@@ -20,7 +20,6 @@
 name: Build and deploy Python app to Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: kuro-portfolio  # set this to the name of your Azure Web App
   PYTHON_VERSION: '3.8'              # set this to the Python version to use
 
 on:
@@ -51,7 +50,12 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
-
+      
+      - name: Run docker compose file
+        run: docker-compose up -d
+        
+      - name: Check running containers
+        run: docker ps -a
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Upload artifact for deployment jobs
