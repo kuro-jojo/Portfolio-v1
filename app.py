@@ -8,21 +8,6 @@ from src.models import UserMessage
 from src.modules.form import fetch_contact_data
 
 app = Flask(__name__)
-print(os.getenv('MYSQL_USER'))
-print(os.getenv('MYSQL_PASSWORD'))
-print(os.getenv('MYSQL_HOST'))
-print(os.getenv('MYSQL_DATABASE'))
-
-app.config[
-    "SQLALCHEMY_DATABASE_URI"
-] = f"mysql+pymysql://{ os.getenv('MYSQL_USER') }:{ os.getenv('MYSQL_PASSWORD')}@{ os.getenv('MYSQL_HOST')}/{ os.getenv('MYSQL_DATABASE')}"
-db = UserMessage.db
-db.init_app(app)
-
-print(os.getenv('MYSQL_USER'))
-print(os.getenv('MYSQL_PASSWORD'))
-print(os.getenv('MYSQL_HOST'))
-print(os.getenv('MYSQL_DATABASE'))
 
 @app.route("/")
 def home():
@@ -44,26 +29,7 @@ def contact():
         Response: redirection to the homepage
     """
 
-    if request.method == "POST":
-        try:
-            userMessage = fetch_contact_data(request.form)
-            db.session.add(userMessage)
-            db.session.commit()
-        except Exception as e:
-            print(f"Exception found : {e}")
-            return redirect(url_for("home"))
-
     return redirect(url_for("home"))
-
-
-@app.before_first_request
-def init():
-    """Initialize some configurations"""
-
-    # create tables
-    with app.app_context():
-        db.create_all()
-
 
 if __name__ == "__main__":
     load_dotenv()
