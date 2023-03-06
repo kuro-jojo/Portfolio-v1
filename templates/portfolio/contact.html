@@ -14,7 +14,7 @@
 
 		<div class="form-floating mb-4">
 			<textarea class="form-control message-area" name="message" placeholder="Leave your message here"
-				id="message_area" required></textarea>
+				id="message_area" required>{{ request.form['message'] }}</textarea>
 			<label for="message_area" class="form-label">Message</label>
 		</div>
 

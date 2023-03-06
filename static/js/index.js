@@ -27,6 +27,7 @@ contact_form.addEventListener("submit", (event) => {
         if (request.readyState === 4 && request.status === 200) {
             message_sent.style.display = "block";
             message_sent.innerHTML = request.responseText;
+            contact_form.reset()
         }
     }
     // send the form data

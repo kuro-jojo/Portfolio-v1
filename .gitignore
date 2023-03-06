@@ -6,3 +6,4 @@ mailer.py
 tracker.py
 log.py
 credentials.json
+instance

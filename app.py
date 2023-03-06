@@ -12,9 +12,12 @@ from src.modules.form import fetch_contact_data
 
 app = Flask(__name__)
 
-app.config[
-    "SQLALCHEMY_DATABASE_URI"
-] = f"mysql+pymysql://{ os.getenv('MYSQL_USER') }:{ os.getenv('MYSQL_PASSWORD')}@{ os.getenv('MYSQL_HOST')}/{ os.getenv('MYSQL_DATABASE')}"
+# app.config[
+#     "SQLALCHEMY_DATABASE_URI"
+# ] = f"mysql+pymysql://{ os.getenv('MYSQL_USER') }:{ os.getenv('MYSQL_PASSWORD')}@{ os.getenv('MYSQL_HOST')}/{ os.getenv('MYSQL_DATABASE')}"
+
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///portfolio.db"
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS '] = False
 db = UserMessage.db
 db.init_app(app)
 
@@ -55,7 +58,6 @@ def contact():
 @app.before_first_request
 def init():
     """Initialize some configurations"""
-
     # create tables
     with app.app_context():
         db.create_all()
