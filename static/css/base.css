@@ -66,3 +66,6 @@
     cursor: pointer;
     background-position: 10% 100%;
 }
+.alert{
+    display: none;
+}

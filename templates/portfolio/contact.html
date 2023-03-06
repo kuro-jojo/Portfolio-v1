@@ -1,18 +1,20 @@
 <h2 class="heading2">I'm ready to talk...💬</h2>
 <div class="contact-form">
-	<form action="/contact" method="POST">
+	<form action="/contact" method="POST" id="contact_form">
 		<div class="form-floating mb-4">
 			<input type="text" name="name" class="form-control" id="name" value="{{ request.form['name']}}" required>
 			<label for="name" class="form-label">Name</label>
 		</div>
 
 		<div class="form-floating mb-4">
-			<input type="email" name="email" class="form-control" id="email" value="{{ request.form['email'] }}" required>
+			<input type="email" name="email" class="form-control" id="email" value="{{ request.form['email'] }}"
+				required>
 			<label for="email" class="form-label">Email address</label>
 		</div>
 
 		<div class="form-floating mb-4">
-			<textarea class="form-control message-area" name="message" placeholder="Leave your message here" id="message_area" required></textarea>
+			<textarea class="form-control message-area" name="message" placeholder="Leave your message here"
+				id="message_area" required></textarea>
 			<label for="message_area" class="form-label">Message</label>
 		</div>
 
@@ -20,4 +22,8 @@
 			<button type="submit" class="btn btn-submit">Send</button>
 		</div>
 	</form>
+	<div class="alert alert-success col-6 m-auto mt-5 text-center" id="message_sent" role="alert">
+		
+	</div>
+
 </div>

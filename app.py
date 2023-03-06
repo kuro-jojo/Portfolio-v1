@@ -1,7 +1,10 @@
+from dotenv import load_dotenv
+
+load_dotenv()
+
 import os
 from flask import Flask, render_template, request, redirect, url_for
 from src.modules import github_api as github
-from dotenv import load_dotenv
 from src.models.UserMessage import UserMessage
 from src.models import UserMessage
 
@@ -24,7 +27,6 @@ def home():
         Response: homepage
     """
     repos = github.get_repos()
-
     return render_template("index.html", repos=repos)
 
 
@@ -38,9 +40,11 @@ def contact():
 
     if request.method == "POST":
         try:
+
             userMessage = fetch_contact_data(request.form)
             db.session.add(userMessage)
             db.session.commit()
+            return "Message sent successfully ."
         except Exception as e:
             print(f"Exception found : {e}")
             return redirect(url_for("home"))
@@ -58,5 +62,4 @@ def init():
 
 
 if __name__ == "__main__":
-    load_dotenv()
     app.run()
