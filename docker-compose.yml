@@ -14,15 +14,14 @@ services:
     ports:
       # <Port exposed> : < MySQL Port running inside container>
       - "3306:3306"
-    expose:
-      # Opens port 3306 on the container
-      - "3306"
       # Where our data will be persisted
     volumes:
       - my-db:/var/lib/mysql
-
+    networks:
+      - backend
+      
   web:
-    image: kuro08/portfolio:latest
+    image: kuro08/portfolio_app:latest
     restart: always
     ports:
       - "5000:5000"
@@ -30,8 +29,12 @@ services:
       - db
     depends_on:
       - db
-      
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
 # Names our volume
 volumes:
   my-db:
-
