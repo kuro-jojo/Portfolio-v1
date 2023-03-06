@@ -1,0 +1,23 @@
+<h2 class="heading2">I'm ready to talk...💬</h2>
+<div class="contact-form">
+	<form action="/contact" method="POST">
+		<div class="form-floating mb-4">
+			<input type="text" name="name" class="form-control" id="name" value="{{ request.form['name']}}" required>
+			<label for="name" class="form-label">Name</label>
+		</div>
+
+		<div class="form-floating mb-4">
+			<input type="email" name="email" class="form-control" id="email" value="{{ request.form['email'] }}" required>
+			<label for="email" class="form-label">Email address</label>
+		</div>
+
+		<div class="form-floating mb-4">
+			<textarea class="form-control message-area" name="message" placeholder="Leave your message here" id="message_area" required></textarea>
+			<label for="message_area" class="form-label">Message</label>
+		</div>
+
+		<div class="d-grid gap-2 col-6 mx-auto">
+			<button type="submit" class="btn btn-submit">Send</button>
+		</div>
+	</form>
+</div>

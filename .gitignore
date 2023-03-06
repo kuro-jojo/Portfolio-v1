@@ -2,3 +2,7 @@ __pycache__
 portfolio_chart
 .env
 .vscode
+mailer.py
+tracker.py
+log.py
+credentials.json

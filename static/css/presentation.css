@@ -1,7 +1,9 @@
 /* Presentation section */
 
 .presentation {
-    margin: 5rem auto;
+    position: relative;
+    top: 4rem;
+    margin: auto;
     width: 70%;
     border: 2px solid var(--primary-color);
     border-bottom: 0;
@@ -52,6 +54,7 @@
 
 .presentation .description p {
     max-width: 100%;
+    padding-right: 1rem;
 }
 
 /* Social media and resume */

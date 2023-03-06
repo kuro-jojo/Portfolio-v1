@@ -4,19 +4,21 @@
     top: 5rem;
     margin: 0 2%;
 }
+
 @media (min-width:1200px) {
-    .projects{
+    .projects {
         width: 75%;
         margin: auto;
     }
 }
+
 .projects>.heading {
     color: var(--secondary-color-bold);
     text-align: center;
     position: relative;
     display: block;
     width: 70%;
-    left: 20%;
+    margin: 3rem auto;
 }
 
 .projects>.heading::after {
@@ -45,10 +47,12 @@
     justify-content: space-around;
     margin: auto;
     gap: 5rem;
-    top: 3rem;
+    /* top: 3rem; */
 }
+
 .projects .card {
     width: 40rem;
+    border: none;
 }
 
 .projects .card .repo-name {

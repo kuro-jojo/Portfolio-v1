@@ -1,229 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    {% block head %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/king.jpg')}}" type="image/x-icon">
-    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
-    <title>Jonathan Assamagan ♟️</title>
-    {% endblock %}
-</head>
+	<head>
+		{% block head %}
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+			<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<link rel="shortcut icon" href="{{ url_for('static', filename='images/king.jpg')}}" type="image/x-icon">
+			<link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+			<title>Jonathan Assamagan ♟️</title>
+		{% endblock %}
+	</head>
 
-<body>
-    <header>
-        <nav class="nav">
-            <ul>
-                <li class="text-normal"><a href="#">Portfolio</a></li>
-                <li class="text-normal"><a href="#">About me</a></li>
-                <li class="text-normal"><a href="#">Contact</a></li>
+	<body>
+		<header>
+			<nav class="nav">
+				<ul>
+					<li class="text-normal">
+						<a href="/">Portfolio</a>
+					</li>
+					<li class="text-normal">
+						<a href="#">About me</a>
+					</li>
+					<li class="text-normal">
+						<a href="#contact">Contact</a>
+					</li>
 
-            </ul>
-        </nav>
-    </header>
-    <main class="content">
-        {% set github_url = 'https://github.com/kuro-jojo' %}
-        {% set linkedin_url = 'https://www.linkedin.com/in/jonathan-koumou/' %}
-        {% set chess_url = 'https://www.chess.com/member/kuro_o8' %}
-        {% set cv_name = 'cv_dev_jonathan.pdf' %}
+				</ul>
+			</nav>
+		</header>
+		<main class="content">
+			{% set github_url = 'https://github.com/kuro-jojo' %}
+			{% set linkedin_url = 'https://www.linkedin.com/in/jonathan-koumou/' %}
+			{% set chess_url = 'https://www.chess.com/member/kuro_o8' %}
+			{% set cv_name = 'cv_dev_jonathan.pdf' %}
 
-        <section class="presentation ">
-            <div class="head">
-                <div class="chess-king">
-                    <img src="{{ url_for('static', filename='images/king.png')}}" alt="" srcset="">
-                </div>
-                <div class="author">
-                    <div class="name heading1">Hi👋, I'm Jonathan ASSAMAGAN</div>
+			<section class="presentation ">
+				<div class="head">
+					<div class="chess-king">
+						<img src="{{ url_for('static', filename='images/king.png')}}" alt="" srcset="">
+					</div>
+					<div class="author">
+						<div class="name heading1">Hi👋, I'm Jonathan ASSAMAGAN</div>
 
-                    <div class="description heading3">
-                        <p>
-                            <span class="status">Engineer Student in Software Development.</span><br>
-                            I do web development, especially back-end.
-                            I am passionate about technology and currently about AI.
-                        </p>
-                    </div>
+						<div class="description heading3">
+							<p>
+								<span class="status">Engineer Student in Software Development.</span><br>
+								I'm a back-end web developer with a strong passion for learning and growing my skills in development. I'm excited to take on new challenges and expand my knowledge to become a skilled and valuable member of any development team.
+							</p>
+						</div>
 
-                </div>
+					</div>
 
-            </div>
-            <div class="other">
-                <div class="social">
-                    <span class="github">
-                        <a href="{{ github_url }}" target="_blank" rel="noreferrer noopener" title="Github Profile">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512">
-                                <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                <path
-                                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                            </svg>
-                        </a>
-                    </span>
-                    <span class="linkedin">
-                        <a href="{{ linkedin_url}}" title="Linkedin Profile" target="_blank" rel="noreferrer noopener"
-                            title="Linkedin Profile ">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
-                                <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                <path
-                                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
-                            </svg>
-                        </a>
-                    </span>
-                    <span class="chess">
-                        <a href="{{ chess_url }}" target="_blank" rel="noreferrer noopener" title="chess.com Profile">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
-                                <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                <path
-                                    d="M199.4 224c29.2-18.4 48.6-50.9 48.6-88c0-57.4-46.6-104-104-104S40 78.6 40 136c0 37.1 19.4 69.6 48.5 88H80c-17.7 0-32 14.3-32 32c0 16.5 12.5 30 28.5 31.8L64 400H224L211.5 287.8c16-1.8 28.5-15.3 28.5-31.8c0-17.7-14.3-32-32-32h-8.6zM6.6 473.4c-4.2 4.2-6.6 10-6.6 16C0 501.9 10.1 512 22.6 512H265.4c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16L240 432H48L6.6 473.4z" />
-                            </svg>
-                        </a>
-                    </span>
-                </div>
+				</div>
+				<div class="other">
+					<div class="social">
+						<span class="github">
+							<a href="{{ github_url }}" target="_blank" rel="noreferrer noopener" title="Github Profile">
+								<svg
+									xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512">
+									<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+									<path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+								</svg>
+							</a>
+						</span>
+						<span class="linkedin">
+							<a href="{{ linkedin_url}}" title="Linkedin Profile" target="_blank" rel="noreferrer noopener" title="Linkedin Profile ">
+								<svg
+									xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+									<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+									<path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+								</svg>
+							</a>
+						</span>
+						<span class="chess">
+							<a href="{{ chess_url }}" target="_blank" rel="noreferrer noopener" title="chess.com Profile">
+								<svg
+									xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
+									<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+									<path d="M199.4 224c29.2-18.4 48.6-50.9 48.6-88c0-57.4-46.6-104-104-104S40 78.6 40 136c0 37.1 19.4 69.6 48.5 88H80c-17.7 0-32 14.3-32 32c0 16.5 12.5 30 28.5 31.8L64 400H224L211.5 287.8c16-1.8 28.5-15.3 28.5-31.8c0-17.7-14.3-32-32-32h-8.6zM6.6 473.4c-4.2 4.2-6.6 10-6.6 16C0 501.9 10.1 512 22.6 512H265.4c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16L240 432H48L6.6 473.4z"/>
+								</svg>
+							</a>
+						</span>
+					</div>
 
-                <div class="resume button-style">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" data-toggle="modal"
-                        data-target="#resume-view">
-                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path
-                            d="M360.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z" />
-                    </svg>
-                    <span data-toggle="modal" data-target="#resume-view">My resume</span>
+					<div class="resume button-style">
+						<svg
+							xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" data-toggle="modal" data-target="#resume-view">
+							<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+							<path d="M360.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/>
+						</svg>
+						<span data-toggle="modal" data-target="#resume-view">My resume</span>
 
-                    <button type="button" title="Download the resume">
-                        <a href="{{ url_for('static', filename='pdf/' ~ cv_name)}}" download="jonathan_resume.pdf">
+						<button type="button" title="Download the resume">
+							<a href="{{ url_for('static', filename='pdf/' ~ cv_name)}}" download="jonathan_resume.pdf">
 
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 384 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                <path
-                                    d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z" />
-                            </svg>
-                        </a>
-                    </button>
-                    <div id="resume-view" class="modal fade" role="dialog">
-                        <div class="modal-dialog modal-lg">
+								<svg
+									xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512">
+									<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+									<path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"/>
+								</svg>
+							</a>
+						</button>
+						<div id="resume-view" class="modal fade" role="dialog">
+							<div
+								class="modal-dialog modal-lg">
 
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <span class="modal-title heading2">My resume</span>
-                                </div>
-                                <div class="modal-body">
-                                    <embed src="{{ url_for('static', filename='pdf/' ~ cv_name)}}" frameborder="0"
-                                        width="100%" height="600px">
+								<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<span class="modal-title heading2">My resume</span>
+									</div>
+									<div class="modal-body">
+										<embed src="{{ url_for('static', filename='pdf/' ~ cv_name)}}" frameborder="0" width="100%" height="600px">
 
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										</div>
+									</div>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-                <div class="resume mobile button-style" id="mobile_resume">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
-                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path
-                            d="M360.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z" />
-                    </svg>
-                    <span>My resume</span>
+					<div class="resume mobile button-style" id="mobile_resume">
+						<svg
+							xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+							<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+							<path d="M360.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/>
+						</svg>
+						<span>My resume</span>
 
-                    <button type="button" title="Download the resume">
-                        <a href="{{ url_for('static', filename='pdf/' ~ cv_name)}}" id="resume_download_link" download="jonathan_resume.pdf">
+						<button type="button" title="Download the resume">
+							<a href="{{ url_for('static', filename='pdf/' ~ cv_name)}}" id="resume_download_link" download="jonathan_resume.pdf">
 
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 384 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                <path
-                                    d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z" />
-                            </svg>
-                        </a>
-                    </button>
-                </div>
-            </div>
+								<svg
+									xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512">
+									<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+									<path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"/>
+								</svg>
+							</a>
+						</button>
+					</div>
+				</div>
 
-        </section>
+			</section>
 
-        <section class="projects">
-            <h1 class="heading">Latest Projects</h1>
-            <div class="cards">
-                {% for repo in repos %}
-                {% set lang = repo.get_topics() %}
+			<section class="projects">
+				<h1 class="heading">Latest Projects</h1>
+				<div class="cards">
+					{% for repo in repos %}
+						{% set lang = repo.get_topics() %}
 
-                <div class="card">
-                    <img src="{{ url_for('static', filename='images/project.png')}}" alt="{{ repo.name}}">
-                    <div>
+						<div class="card">
+							<img src="{{ url_for('static', filename='images/project.png')}}" alt="{{ repo.name}}">
+							<div>
 
-                        <span class="repo-name">
-                            <b>{{ repo.name }}</b>
-                        </span>
-                        <div class="languages">
-                            {% for l in lang %}
-                            <span class="lang">{{ l }}</span>
-                            {% endfor %}
-                        </div>
-                        <p class="text-normal">{{ repo.description }}</p>
-                    </div>
+								<span class="repo-name">
+									<b>{{ repo.name }}</b>
+								</span>
+								<div class="languages">
+									{% for l in lang %}
+										<span class="lang">{{ l }}</span>
+									{% endfor %}
+								</div>
+								<p class="text-normal">{{ repo.description }}</p>
+							</div>
 
-                    <div class="code button-style">
-                        <a href="{{ repo.html_url }}" target="_blank" rel="noreferrer noopener">
-                            <span class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 640 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                    <path
-                                        d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
-                                </svg>
-                            </span>
-                            <span class="">Code</span>
-                        </a>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
-    </main>
+							<div class="code button-style">
+								<a href="{{ repo.html_url }}" target="_blank" rel="noreferrer noopener">
+									<span class="icon">
+										<svg
+											xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 512">
+											<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+											<path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/>
+										</svg>
+									</span>
+									<span class="">Code</span>
+								</a>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</section>
 
-    <footer class="footer">
-        <span>
-            Made with ❤️ by Jonathan Assamagan.
-        </span>
-        <div class="follow-me social">
-            <span class="github">
-                <a href="{{ github_url }}" target="_blank" rel="noreferrer noopener" title="Github Profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512">
-                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path
-                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                    </svg>
-                </a>
-            </span>
-            <span class="linkedin">
-                <a href="{{ linkedin_url}}" title="Linkedin Profile" target="_blank" rel="noreferrer noopener"
-                    title="Linkedin Profile ">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
-                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path
-                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
-                    </svg>
-                </a>
-            </span>
-            <span class="chess">
-                <a href="{{ chess_url }}" target="_blank" rel="noreferrer noopener" title="chess.com Profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
-                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                        <path
-                            d="M199.4 224c29.2-18.4 48.6-50.9 48.6-88c0-57.4-46.6-104-104-104S40 78.6 40 136c0 37.1 19.4 69.6 48.5 88H80c-17.7 0-32 14.3-32 32c0 16.5 12.5 30 28.5 31.8L64 400H224L211.5 287.8c16-1.8 28.5-15.3 28.5-31.8c0-17.7-14.3-32-32-32h-8.6zM6.6 473.4c-4.2 4.2-6.6 10-6.6 16C0 501.9 10.1 512 22.6 512H265.4c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16L240 432H48L6.6 473.4z" />
-                    </svg>
-                </a>
-            </span>
-        </div>
-    </footer>
-    {% block script %}
-    <script src="{{ url_for('static', filename='js/index.js')}}"></script>
-    {% endblock %}
-</body>
+			<section class="contact" id="contact">
+				{% include "portfolio/contact.html" %}
+			</section>
+		</main>
+
+		<footer class="footer">
+			<span>
+				Made with ❤️ by Jonathan Assamagan.
+			</span>
+			<div class="follow-me social">
+				<span class="github">
+					<a href="{{ github_url }}" target="_blank" rel="noreferrer noopener" title="Github Profile">
+						<svg
+							xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512">
+							<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+							<path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+						</svg>
+					</a>
+				</span>
+				<span class="linkedin">
+					<a href="{{ linkedin_url}}" title="Linkedin Profile" target="_blank" rel="noreferrer noopener" title="Linkedin Profile ">
+						<svg
+							xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+							<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+							<path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+						</svg>
+					</a>
+				</span>
+				<span class="chess">
+					<a href="{{ chess_url }}" target="_blank" rel="noreferrer noopener" title="chess.com Profile">
+						<svg
+							xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
+							<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+							<path d="M199.4 224c29.2-18.4 48.6-50.9 48.6-88c0-57.4-46.6-104-104-104S40 78.6 40 136c0 37.1 19.4 69.6 48.5 88H80c-17.7 0-32 14.3-32 32c0 16.5 12.5 30 28.5 31.8L64 400H224L211.5 287.8c16-1.8 28.5-15.3 28.5-31.8c0-17.7-14.3-32-32-32h-8.6zM6.6 473.4c-4.2 4.2-6.6 10-6.6 16C0 501.9 10.1 512 22.6 512H265.4c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16L240 432H48L6.6 473.4z"/>
+						</svg>
+					</a>
+				</span>
+			</div>
+		</footer>
+		{% block script %}
+			<script src="{{ url_for('static', filename='js/index.js')}}"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+		{% endblock %}
+	</body>
 
 </html>

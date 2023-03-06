@@ -1,6 +1,7 @@
 @import url(base.css);
 @import url(presentation.css);
 @import url(projects.css);
+@import url(contact.css);
 
 * {
     box-sizing: border-box;
@@ -23,17 +24,13 @@ header {
     position: relative;
     width: max-content;
     max-height: 100%;
-    float: right;
-    right: 10rem;
     top: 4rem;
+    margin: auto;
 }
 
 .nav ul {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin: 0;
-    gap: 2em;
+    gap: 5rem;
 }
 
 .nav li {
@@ -53,7 +50,7 @@ header {
 /* Main body */
 main {
     position: relative;
-    top: 10vh;
+    top: 2rem;
     min-width: 100%;
     margin: auto;
 }
@@ -74,7 +71,7 @@ main {
     width: 100%;
     color: var(--secondary-color);
     text-align: center;
-    padding: 8rem 0;
+    padding: 5rem 0;
     justify-content: center;
 }
 

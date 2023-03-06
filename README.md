@@ -10,7 +10,7 @@ It is hosted on Microsoft Azure and is accessible [here](portfolio-kuro.koyeb.ap
 The portfolio contains my main projects on github.
 To do so, I use the Github API to get the repositories that are starred.
 
-As I am using **python** for this project, I use the **PyGithub** module.
+I've used the **PyGithub** module to get the projects
 
 
 

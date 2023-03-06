@@ -1,0 +1,45 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 15rem;
+}
+
+.contact>.heading2 {
+    margin: auto;
+}
+
+.contact-form {
+    margin: 3rem auto;
+    width: 40%;
+}
+
+.form-control {
+    box-shadow: none !important;
+    padding: 2.5rem !important;
+    padding-top: 3rem !important;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+
+}
+
+.form-label {
+    color: var(--secondary-color);
+}
+
+.message-area {
+    min-height: 10rem !important;
+    max-height: 20rem;
+}
+
+.btn-submit {
+    margin-top: 1rem;
+    border-color: var(--primary-color);
+}
+
+.btn-submit:hover{
+    background-color: var(--primary-color);
+    border-color: white;
+}

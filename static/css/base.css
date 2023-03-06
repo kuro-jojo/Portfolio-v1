@@ -28,7 +28,7 @@
 
 .heading2 {
     font-weight: bold;
-    font-size: clamp(2rem, 4rem + 10vw, 3rem);
+    font-size:clamp(2rem, -0.875rem + 5vw, 5rem);
     line-height: 125%;
     letter-spacing: -0.03em;
 }
