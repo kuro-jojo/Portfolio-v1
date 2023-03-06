@@ -20,8 +20,9 @@ services:
       # Where our data will be persisted
     volumes:
       - my-db:/var/lib/mysql
+
   web:
-    build: .
+    image: kuro08/portfolio
     restart: always
     ports:
       - "5000:5000"
