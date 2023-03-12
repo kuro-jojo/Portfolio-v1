@@ -24,13 +24,8 @@ db.init_app(app)
 
 @app.route("/")
 def home():
-    """load github projects and show the homepage
-
-    Returns:
-        Response: homepage
-    """
-    repos = github.get_repos()
-    return render_template("index.html", repos=repos)
+    
+    return render_template("index.html")
 
 
 @app.route("/contact", methods=["GET", "POST"])
