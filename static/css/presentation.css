@@ -71,6 +71,7 @@
     flex-direction: row;
     align-items: flex-end;
     gap: clamp(1rem, -3rem + 8vw, 3rem);
+    justify-content: center;
 }
 
 .social svg {
@@ -92,7 +93,7 @@
 }
 
 .chess {
-    fill: #10d19a;
+    fill: #26c1b7;
 }
 .presentation .resume.mobile {
     display: none;

@@ -72,11 +72,18 @@ main {
     color: var(--secondary-color);
     text-align: center;
     padding: 5rem 0;
-    justify-content: center;
+    margin: auto;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-.footer span{
-    margin: auto 3%;
+.footer> span{
+    margin: auto;
+    margin-top: 3rem;
+    width: 50%;
+}
+.footer a{
+    text-decoration: none;
 }
 
 
