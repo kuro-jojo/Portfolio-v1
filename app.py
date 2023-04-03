@@ -25,7 +25,7 @@ db.init_app(app)
 @app.route("/")
 def home():
     with open('user_visits.txt', 'a') as f:
-        f.write(request.base_url)
+        f.write(request.remote_addr)
         f.write('\n')
     return render_template("index.html")
 
@@ -61,4 +61,4 @@ def init():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0")
