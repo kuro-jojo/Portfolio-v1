@@ -24,7 +24,9 @@ db.init_app(app)
 
 @app.route("/")
 def home():
-    
+    with open('user_visits.txt', 'a') as f:
+        f.write(request.base_url)
+        f.write('\n')
     return render_template("index.html")
 
 
