@@ -1,3 +1,4 @@
+import datetime
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -25,7 +26,9 @@ db.init_app(app)
 @app.route("/")
 def home():
     with open('user_visits.txt', 'a') as f:
-        f.write(request.remote_addr)
+        f.write("IP : " + request.remote_addr)
+        f.write('\t')
+        f.write("On : " +datetime.datetime.now().strftime("%d-%m-%Y at %H:%M:%S"))
         f.write('\n')
     return render_template("index.html")
 
@@ -61,4 +64,4 @@ def init():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", debug=True)
