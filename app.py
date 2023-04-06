@@ -5,7 +5,6 @@ load_dotenv()
 
 import os
 from flask import Flask, render_template, request, redirect, url_for
-from src.modules import github_api as github
 from src.models.UserMessage import UserMessage
 from src.models import UserMessage
 
@@ -25,11 +24,14 @@ db.init_app(app)
 
 @app.route("/")
 def home():
-    with open('user_visits.txt', 'a') as f:
+    with open("user_visits.txt", "a") as f:
         f.write("IP : " + request.remote_addr)
-        f.write('\t')
-        f.write("On : " +datetime.datetime.now().strftime("%d-%m-%Y at %H:%M:%S"))
-        f.write('\n')
+        f.write("\t")
+        f.write("On : " + datetime.datetime.now().strftime("%d-%m-%Y at %H:%M:%S"))
+        f.write("\t")
+        f.write("\t")
+        f.write("Browser : " + request.headers.get("User-Agent").split(" ")[0])
+        f.write("\n")
     return render_template("index.html")
 
 
@@ -40,10 +42,8 @@ def contact():
     Returns:
         Response: redirection to the homepage
     """
-
     if request.method == "POST":
         try:
-
             userMessage = fetch_contact_data(request.form)
             db.session.add(userMessage)
             db.session.commit()
