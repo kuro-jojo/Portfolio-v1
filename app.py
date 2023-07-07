@@ -25,7 +25,7 @@ db.init_app(app)
 @app.route("/")
 def home():
     """Send to homepage"""
-
+    log()
     return render_template("index.html")
 
 
@@ -57,7 +57,6 @@ def init():
         db.create_all()
 
 
-@app.before_request
 def log():
     """Logs message to a remote log viewer"""
     if not paperTrailAppUrl and not paperTrailAppPort:
@@ -71,7 +70,7 @@ def log():
     logger = logging.getLogger()
     logger.addHandler(syslog)
     logger.setLevel(logging.INFO)
-    message = f"Browser : {request.headers.get('User-Agent').split(' ')[0]} "
+    message = f"IP : {request.remote_addr} - Browser : {request.headers.get('User-Agent').split(' ')[0]} "
     logger.info(message)
 
 class ContextFilter(logging.Filter):
