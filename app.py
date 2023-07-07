@@ -38,12 +38,13 @@ def contact():
     """
     if request.method == "POST":
         try:
+            log("Receive new message via contact form")
             userMessage = fetch_contact_data(request.form)
             db.session.add(userMessage)
             db.session.commit()
             return "Message sent successfully ."
         except Exception as e:
-            print(f"Exception found : {e}")
+            log(f"Exception found : {e}", logging.ERROR)
             return redirect(url_for("home"))
 
     return redirect(url_for("home"))
@@ -54,10 +55,11 @@ def init():
     """Initialize some configurations"""
     # create tables
     with app.app_context():
+        log("Creating database")
         db.create_all()
 
 
-def log():
+def log(msg="", level=logging.INFO):
     """Logs message to a remote log viewer"""
     if not paperTrailAppUrl and not paperTrailAppPort:
         raise TypeError("An url and a port is requested")
@@ -69,8 +71,8 @@ def log():
     syslog.setFormatter(formatter)
     logger = logging.getLogger()
     logger.addHandler(syslog)
-    logger.setLevel(logging.INFO)
-    message = f"IP : {request.remote_addr} - Browser : {request.headers.get('User-Agent').split(' ')[0]} "
+    logger.setLevel(level)
+    message = f"IP : {request.remote_addr} - Browser : {request.headers.get('User-Agent').split(' ')[0]} : {msg}"
     logger.info(message)
 
 class ContextFilter(logging.Filter):
