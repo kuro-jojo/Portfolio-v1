@@ -23,16 +23,8 @@ db.init_app(app)
 
 @app.route("/")
 def home():
-    """ Send to homepage """
-    
-    with open("user_visits.txt", "a") as f:
-        f.write("IP : " + request.remote_addr)
-        f.write("\t")
-        f.write("On : " + datetime.datetime.now().strftime("%d-%m-%Y at %H:%M:%S"))
-        f.write("\t")
-        f.write("\t")
-        f.write("Browser : " + request.headers.get("User-Agent").split(" ")[0])
-        f.write("\n")
+    """Send to homepage"""
+
     return render_template("index.html")
 
 
@@ -57,37 +49,37 @@ def contact():
 
 
 # @app.before_request
-# def init():
-#     """Initialize some configurations"""
-#     # create tables
-#     with app.app_context():
-#         db.create_all()
+def init():
+    """Initialize some configurations"""
+    # create tables
+    with app.app_context():
+        db.create_all()
+
 
 @app.before_request
 def log():
-    """ Logs message to a remote log viewer"""
+    """Logs message to a remote log viewer"""
     if not paperTrailAppUrl and not paperTrailAppPort:
         raise TypeError("An url and a port is requested")
-    
-    syslog = SysLogHandler(address=(paperTrailAppUrl, paperTrailAppPort))
-    print(paperTrailAppPort, paperTrailAppUrl)
-    syslog.addFilter(ContextFilter())
 
-    format = "%(asctime)s %(hostname)s - %(message)s"
+    syslog = SysLogHandler(address=(paperTrailAppUrl, int(paperTrailAppPort)))
+    syslog.addFilter(ContextFilter())
+    format = "%(asctime)s %(hostname)s Portfolio-kuro-jojo: %(message)s"
     formatter = logging.Formatter(format, datefmt="%b %d %H:%M:%S")
     syslog.setFormatter(formatter)
     logger = logging.getLogger()
     logger.addHandler(syslog)
     logger.setLevel(logging.INFO)
-    message = request.headers.get('User-Agent').split(' ')[0]
-    logger.info(f"Browser : {message}")
-    
+    message = f"Browser : {request.headers.get('User-Agent').split(' ')[0]} "
+    logger.info(message)
+
 class ContextFilter(logging.Filter):
     hostname = socket.gethostname()
 
     def filter(self, record):
         record.hostname = ContextFilter.hostname
         return True
+
 
 if __name__ == "__main__":
     paperTrailAppUrl = os.getenv("PAPER_TRAIL_URL")

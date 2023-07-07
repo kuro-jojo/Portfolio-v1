@@ -1,6 +1,0 @@
-IP : 127.0.0.1	On : 07-07-2023 at 09:25:27		Browser : Mozilla/5.0
-IP : 127.0.0.1	On : 07-07-2023 at 09:36:31		Browser : Mozilla/5.0
-IP : 127.0.0.1	On : 07-07-2023 at 09:45:24		Browser : Mozilla/5.0
-IP : 127.0.0.1	On : 07-07-2023 at 09:47:41		Browser : Mozilla/5.0
-IP : 127.0.0.1	On : 07-07-2023 at 09:50:06		Browser : Mozilla/5.0
-IP : 127.0.0.1	On : 07-07-2023 at 09:52:25		Browser : Mozilla/5.0
