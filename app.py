@@ -1,16 +1,15 @@
 import datetime
 from dotenv import load_dotenv
+import logging
+import socket
+import os
+from flask import Flask, render_template, request, redirect, url_for
+from logging.handlers import SysLogHandler
 
 load_dotenv()
 
-import logging
-import socket
-from logging.handlers import SysLogHandler
-import os
-from flask import Flask, render_template, request, redirect, url_for
 from src.models.UserMessage import UserMessage
 from src.models import UserMessage
-
 from src.modules.form import fetch_contact_data
 
 app = Flask(__name__)
