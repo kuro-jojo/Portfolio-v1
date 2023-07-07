@@ -13,6 +13,8 @@ from src.models import UserMessage
 from src.modules.form import fetch_contact_data
 
 app = Flask(__name__)
+paperTrailAppUrl = os.getenv("PAPER_TRAIL_URL")
+paperTrailAppPort = os.getenv("PAPER_TRAIL_PORT")
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///portfolio.db"
 # app.config['SQLALCHEMY_TRACK_MODIFICATIONS '] = False
@@ -81,6 +83,4 @@ class ContextFilter(logging.Filter):
 
 
 if __name__ == "__main__":
-    paperTrailAppUrl = os.getenv("PAPER_TRAIL_URL")
-    paperTrailAppPort = os.getenv("PAPER_TRAIL_PORT")
     app.run(host="0.0.0.0", debug=True)
