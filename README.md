@@ -4,6 +4,10 @@ This website is a personal project that, first of all is a portfolio and also co
 
 It is accessible [here](https://portfolio-kuro.koyeb.app/).
 
+## Environment variables
+
+    PAPER_TRAIL_URL= # Paper trail url
+    PAPER_TRAIL_PORT= # Paper trail port
 
 ## Logging system 
 

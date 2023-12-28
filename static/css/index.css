@@ -11,12 +11,9 @@
 }
 html{
     overflow-x: hidden;
-    overflow-y: scroll;
 }
 body {
-    min-height: 100 vh;
-    overflow-x: hidden;
-
+    overflow: hidden;
 }
 
 /* Navbar */
@@ -85,8 +82,6 @@ main {
 .footer a{
     text-decoration: none;
 }
-
-
 
 @media (min-width:490px) {
     .footer .social svg{

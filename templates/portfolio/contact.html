@@ -1,6 +1,6 @@
 <h2 class="heading2">I'm ready to talk...💬</h2>
 <div class="contact-form">
-	<form action="/contact" method="POST" id="contact_form">
+	<form action="/contact" method="POST" id="contact_form" novalidate>
 		<div class="form-floating mb-4">
 			<input type="text" name="name" class="form-control" id="name" value="{{ request.form['name']}}" required>
 			<label for="name" class="form-label">Name</label>
@@ -23,7 +23,6 @@
 		</div>
 	</form>
 	<div class="alert alert-success col-6 m-auto mt-5 text-center" id="message_sent" role="alert">
-		
 	</div>
 
 </div>
